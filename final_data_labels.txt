@@ -1,0 +1,205 @@
+*******************************************************************
+*  Stata "do-file" file with labels and missing data specifications
+*  Created by ddltox on Dec 19, 2020  (Sat 02:05 PM EST)
+*  DDL source file: "/web/sda.artsci.utoronto.ca/htdocs/sdaweb/tmpdir/AAyu02hb.txt".
+*
+*  Note that the data dictionary is given at the end of this file.
+*  Put the dictionary into a separate file (by editing this file).
+*  Then specify below the name of the dictionary file.
+*
+*  DDL file gives the following dataset description:
+*    Records per case: 1
+*    Record length:    103
+*******************************************************************
+
+
+label data "General Social Survey, Cycle 30: Canadians at Work and Home"
+
+#delimit ;
+label define agearr10  1 "0 to 9 years" 2 "10 to 19 years" 3 "20 to 29 years" 
+                       4 "30 to 39 years" 5 "40 to 49 years" 
+                       6 "50 to 59 years" 7 "60 years and over" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define agecxryg  1 "0 to 4 years" 2 "5 to 9 years" 3 "10 to 14 years" 
+                       4 "15 to 19 years" 5 "19 to 24 years" 
+                       6 "25 years and older" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define agefhsdg  1 "0 to 9 years" 2 "10 to 19 years" 3 "20 to 29 years" 
+                       4 "30 to 39 years" 5 "40 to 49 years" 
+                       6 "50 years and over" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define agegr10   1 "15 to 24 years" 2 "25 to 34 years" 
+                       3 "35 to 44 years" 4 "45 to 54 years" 
+                       5 "55 to 64 years" 6 "65 to 74 years" 
+                       7 "75 years and over" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define agehsdyg  1 "0 to 9 years" 2 "10 to 19 years" 3 "20 to 29 years" 
+                       4 "30 to 39 years" 5 "40 to 49 years" 
+                       6 "50 to 59 years" 7 "60 to 69 years" 
+                       8 "70 to 79 years" 9 "80 to 89 years" 
+                       10 "90 years and over" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define aprgrdif  1 "Respondent is 11 or more years older" 
+                       2 "Respondent is 6 to 10 years older" 
+                       3 "Respondent is 5 years older" 
+                       4 "Respondent is 4 years older" 
+                       5 "Respondent is 3 years older" 
+                       6 "Respondent is 2 years older" 
+                       7 "Respondent is 1 year older" 
+                       8 "Respondent and spouse/partner are same age" 
+                       9 "Respondent is 1 year younger" 
+                       10 "Respondent is 2 years younger" 
+                       11 "Respondent is 3 years younger" 
+                       12 "Respondent is 4 years younger" 
+                       13 "Respondent is 5 years younger" 
+                       14 "Respondent is 6 to 10 years younger" 
+                       15 "Respondent is 11 or more years younger" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define ageprg10  1 "15 to 24 years" 2 "25 to 34 years" 
+                       3 "35 to 44 years" 4 "45 to 54 years" 
+                       5 "55 to 64 years" 6 "65 to 74 years" 
+                       7 "75 years and over" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define sex       1 "Male" 2 "Female" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define marstat   1 "Married" 2 "Living common-law" 3 "Widowed" 
+                       4 "Separated" 5 "Divorced" 6 "Single, never married" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define sexpr     1 "Male spouse/partner in the household" 
+                       2 "Female spouse/partner in the household" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define prtypec   0 "Respondent has no partner in the household" 
+                       1 "Respondent has a married partner in the household" 
+                       2 "Respondent has a common-law partner in the household" 
+                       3 "Respondent has a same sex partner in the household" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define chh0014c  0 "None" 1 "One" 2 "Two" 3 "Three or more" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define chinhsdc  0 "None" 1 "One" 2 "Two" 3 "Three" 4 "Four or more" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define cxr0014c  0 "None" 1 "One" 2 "Two" 3 "Three or more" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define cxrflag   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define cxrtime6  1 "No child under 19 years of age at home" 
+                       2 "All children under 5 years of age" 
+                       3 "All children between 5 and 12 years of age" 
+                       4 "All children 13 years of age and older" 
+                       5 "At least one child under 5 years of age but not all children" 
+                       6 "Other" 96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define parnum    0 "None" 1 "One parent" 2 "Two parents" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define livarr08  1 "Under 25 years - Not living with parents" 
+                       2 "Under 25 years - Living with both parents" 
+                       3 "Under 25 years - Living with mother only" 
+                       4 "Under 25 years - Living with father only" 
+                       5 "25 years of age or older - Not living with parents" 
+                       6 "25 years of age or older - Living with both parents" 
+                       7 "25 years of age or older - Living with mother only" 
+                       8 "25 years of age or older - Living with father only" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define livarr11  1 "Living alone" 2 "Living with spouse only" 
+                       3 "Living with spouse and child(ren) < 25 years" 
+                       4 "Living with spouse and child(ren) 25 years or older" 
+                       5 "Living with spouse and other" 
+                       6 "Living without spouse but with chil(ren) < 25 years" 
+                       7 "Living without spouse but with chil(ren) 25 years and older" 
+                       8 "Living with two parents" 9 "Living with one parent" 
+                       10 "Multiple person household - Other living arrangement" 
+                       11 "Multiple person household - Relationships undefined" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define fhsd      1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define mhsd      1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define agemhsdg  1 "0 to 9 years" 2 "10 to 19 years" 3 "20 to 29 years" 
+                       4 "30 to 39 years" 5 "40 to 49 years" 
+                       6 "50 years and over" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define grfhsd    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define grmhsd    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define sonhsd    0 "None" 1 "One" 2 "Two" 3 "Three" 4 "Four or more" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define dauhsd    0 "None" 1 "One" 2 "Two" 3 "Three" 4 "Four or more" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define solhsdc   0 "None" 1 "One" 2 "Two or more" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define grsohsdc  0 "None" 1 "One" 2 "Two or more" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define grchhsdc  0 "None" 1 "One" 2 "Two" 3 "Three or more" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define grdahsdc  0 "None" 1 "One" 2 "Two or more" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define brhsdc    0 "None" 1 "One" 2 "Two" 3 "Three or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define brohsdc   0 "None" 1 "One" 2 "Two or more" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define sihsdc    0 "None" 1 "One" 2 "Two" 3 "Three or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define ilhsdc    0 "None" 1 "One" 2 "Two" 3 "Three or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define orelhsdc  0 "None" 1 "One" 2 "Two" 3 "Three" 4 "Four or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define unrlhsdc  0 "None" 1 "One" 2 "Two" 3 "Three" 4 "Four or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define hsdsizec  1 "One person household" 2 "Two person household" 
+                       3 "Three person household" 4 "Four person household" 
+                       5 "Five person household" 
+                       6 "Six or more person household" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define hsdeligc  1 "One member" 2 "Two members" 3 "Three members" 
+                       4 "Four or more members" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define multigen  1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define luc_rst   1 "Larger urban population centres (CMA/CA)" 
+                       2 "Rural areas and small population centres (non CMA/CA)" 
+                       3 "Prince Edward Island" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define prv       10 "Newfoundland and Labrador" 
+                       11 "Prince Edward Island" 12 "Nova Scotia" 
+                       13 "New Brunswick" 24 "Quebec" 35 "Ontario" 
+                       46 "Manitoba" 47 "Saskatchewan" 48 "Alberta" 
+                       59 "British Columbia" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define ehg3_01   1 "Less than high school diploma or its equivalent" 
+                       2 "High school diploma or a high school equivalency certificate" 
+                       3 "Trade certificate or diploma" 
+                       4 "College/CEGEP/other non-university certificate or diploma" 
+                       5 "University certificate or diploma below the bachelor's level" 
+                       6 "Bachelor's degree (e.g. B.A., B.Sc., LL.B.)" 
+                       7 "University certificate, diploma, degree above the BA level" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define ttlincg2  1 "Less than $25,000" 2 "$25,000 to $49,999" 
+                       3 "$50,000 to $74,999" 4 "$75,000 to $99,999" 
+                       5 "$100,000 to $124,999" 6 "$125,000 or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define famincg2  1 "Less than $25,000" 2 "$25,000 to $49,999" 
+                       3 "$50,000 to $74,999" 4 "$75,000 to $99,999" 
+                       5 "$100,000 to $124,999" 6 "$125,000 or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+

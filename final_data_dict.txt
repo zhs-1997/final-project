@@ -1,0 +1,63 @@
+dictionary using Y {
+*****************************************************************
+*  Replace 'Y' with the name of the data file.
+*  The default suffix is '.raw'.
+*
+*  Put this dictionary into a separate file (with the suffix .dct).
+*  (The first line of the dictionary file must contain the
+*  'dictionary' command.)
+*
+*  Then edit the name of that dictionary file into the 'do-file'
+*  portion of the STATA definitions.
+*******************************************************************
+*  Records per case:
+_lines(1)
+
+_line(1)
+
+_column(1)     long  CASEID             %5f    ""
+_column(7)     int   agearr10 :agearr10 %2f    "Age group of the respondent when came to live permanently in Canada"
+_column(10)    int   agecxryg :agecxryg %2f    "Age of respondent's youngest child in household"
+_column(13)    int   agefhsdg :agefhsdg %2f    "Age of respondents father in household"
+_column(16)    int   agegr10  :agegr10  %1f    "Age group of respondent (groups of 10)"
+_column(18)    int   agehsdyg :agehsdyg %2f    "Age of youngest household member in respondent's household"
+_column(21)    int   aprgrdif :aprgrdif %2f    "Age difference between respondent and spouse/partner"
+_column(24)    int   ageprg10 :ageprg10 %2f    "Age group of respondents spouse/partner (groups of 10)"
+_column(27)    int   sex      :sex      %1f    "Sex of respondent"
+_column(29)    int   marstat  :marstat  %1f    "Marital status of the respondent"
+_column(31)    int   sexpr    :sexpr    %1f    "Sex of respondents spouse/partner living in the household"
+_column(33)    int   prtypec  :prtypec  %1f    "Type of partner respondent has living in the household"
+_column(35)    int   chh0014c :chh0014c %1f    "Child(ren) in household - 0 to 14 years"
+_column(37)    int   chinhsdc :chinhsdc %1f    "Respondents child(ren) in household - Any age/marital status"
+_column(39)    int   cxr0014c :cxr0014c %1f    "Respondent's child(ren) in household - 0 to 14 years"
+_column(41)    int   cxrflag  :cxrflag  %1f    "Child(ren) of the respondent living in the household"
+_column(43)    int   cxrtime6 :cxrtime6 %1f    "Age group of respondents child(ren) in household"
+_column(45)    int   parnum   :parnum   %1f    "Number of parents the respondent has in household"
+_column(47)    int   livarr08 :livarr08 %1f    "Living arrangement of respondent's household (8 categories)"
+_column(49)    int   livarr11 :livarr11 %2f    "Living arrangement of respondents household (11 categories)"
+_column(52)    int   fhsd     :fhsd     %1f    "Respondents father in household"
+_column(54)    int   mhsd     :mhsd     %1f    "Respondents mother in household"
+_column(56)    int   agemhsdg :agemhsdg %2f    "Age of respondents mother in household"
+_column(59)    int   grfhsd   :grfhsd   %1f    "Respondents grandfather in household"
+_column(61)    int   grmhsd   :grmhsd   %1f    "Respondents grandmother in household"
+_column(63)    int   sonhsd   :sonhsd   %1f    "Number of respondents sons in household"
+_column(65)    int   dauhsd   :dauhsd   %1f    "Number of respondents daughters in household"
+_column(67)    int   solhsdc  :solhsdc  %1f    "Number of respondents older sisters in household"
+_column(69)    int   grsohsdc :grsohsdc %1f    "Number of respondents grandsons in household"
+_column(71)    int   grchhsdc :grchhsdc %1f    "Number of respondents grandchildren in household"
+_column(73)    int   grdahsdc :grdahsdc %1f    "Number of respondents granddaughters in household"
+_column(75)    int   brhsdc   :brhsdc   %1f    "Number of respondents brothers in household"
+_column(77)    int   brohsdc  :brohsdc  %1f    "Number of respondents older brothers in household"
+_column(79)    int   sihsdc   :sihsdc   %1f    "Number of respondents sisters in household"
+_column(81)    int   ilhsdc   :ilhsdc   %1f    "Number of respondents in-laws in the household"
+_column(83)    int   orelhsdc :orelhsdc %1f    "Number of other people related to respondent in household"
+_column(85)    int   unrlhsdc :unrlhsdc %1f    "Number of people unrelated to respondent in household"
+_column(87)    int   hsdsizec :hsdsizec %1f    "Household size of respondent"
+_column(89)    int   hsdeligc :hsdeligc %1f    "Number of members in respondents household 15 years of age or older"
+_column(91)    int   multigen :multigen %1f    "Three generations or more in the respondents household"
+_column(93)    int   luc_rst  :luc_rst  %1f    "Population centre indicator"
+_column(95)    int   prv      :prv      %2f    "Province of residence"
+_column(98)    int   ehg3_01  :ehg3_01  %2f    "Education - Highest certificate, diploma or degree"
+_column(101)   int   ttlincg2 :ttlincg2 %1f    "Income - Personal income group (before tax)"
+_column(103)   int   famincg2 :famincg2 %1f    "Family income - Family income group (before tax)"
+}
